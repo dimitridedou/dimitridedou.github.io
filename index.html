@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="el">
     <head>
@@ -5,12 +6,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://grcodeclub.gr/js/data.js"></script>
-        <meta property="og:title" content="DEDOUSIS DIMITRIS - GrCode Club">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <meta property="og:title" content="Dedousis Dimitris - GrCode Club">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-            a{
+            a.social{
                 text-decoration: none;
                 color: black;
             }
@@ -39,7 +38,7 @@
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                                <span class="input-group-text" id="myemail"><a href= "mailto: dimitri.dedou@gmail.com">dimitri.dedou@gmail.com</a></span>
+                                <span class="input-group-text" id="myemail"><a class="social" href= "mailto: dimitri.dedou@gmail.com">dimitri.dedou@gmail.com</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-phone  "></i></span>
@@ -47,23 +46,23 @@
                             </div>  
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-facebook "></i></span>
-                                <span class="input-group-text" id="facebookLink"><a href="https://www.facebook.com/dimitridedou">Dimitris Dedousis</a></span>
+                                <span class="input-group-text" id="facebookLink"><a class="social" href="https://www.facebook.com/dimitridedou">Dimitris Dedousis</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-instagram "></i></span>
-                                <span class="input-group-text" id="instagramLink"><a href="https://www.instagram.com/dimitri.dedou">dimitri.dedou</a></span>
+                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://www.instagram.com/dimitri.dedou">dimitri.dedou</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-github "></i></span>
-                                <span class="input-group-text" id="instagramLink"><a href="https://github.com/dimitridedou">dimitridedou</a></span>
+                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://github.com/dimitridedou">dimitridedou</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-linkedin "></i></span>
-                                <span class="input-group-text" id="instagramLink"><a href="https://www.linkedin.com/in/dimitridedou/">Dimitris Dedousis</a></span>
+                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://www.linkedin.com/in/dimitridedou/">Dimitris Dedousis</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-x"></i></span>
-                                <span class="input-group-text" id="instagramLink"><a href="https://x.com/dimitridedou">Dimitris Dedousis</a></span>
+                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://x.com/dimitridedou">Dimitris Dedousis</a></span>
                             </div>
                         </div>
                     </div>
@@ -91,19 +90,29 @@
                                 <div class="accordion" id="roadmapAccordion">
             
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#programmingLanguages" aria-expanded="true" aria-controls="programmingLanguages">Γλώσσες Προγραμματισμού</button></h2>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#programmingLanguages" aria-expanded="true" aria-controls="programmingLanguages">Γλώσσες Προγραμματισμού</button>
                                         <div id="programmingLanguages" class="accordion-collapse collapse show" aria-labelledby="programmingLanguages" data-bs-parent="#roadmapAccordion">
                                         <div class="accordion-body">
-                                           <h4>C, Python, Html, CSS, JavaScript</h4>                                        
+                                           <p>C, Python , Html , CSS , <a href="https://github.com/dimitridedou/javascript">JavaScript</a> , <a href="https://github.com/dimitridedou/java">Java</a>
+                                            ,  <a href="https://github.com/dimitridedou/php">Php</a></p>                                        
                                         </div>
                                         </div>
                                     </div>
-                        
+
+                                      <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#operatingsystem" aria-expanded="false" aria-controls="operatingsystem">Λειτουργικά Συστήματα</button>
+                                        <div id="operatingsystem" class="accordion-collapse collapse" aria-labelledby="operatingsystem" data-bs-parent="#roadmapAccordion">
+                                            <div class="accordion-body">
+                                                <p>Microsoft Windows , Linux, <a href="https://github.com/dimitridedou/linux-scripts">Linux Scripts</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms">Πλατφόρμες</button></h2>
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms">Πλατφόρμες</button>
                                         <div id="platforms" class="accordion-collapse collapse" aria-labelledby="platforms" data-bs-parent="#roadmapAccordion">
                                             <div class="accordion-body">
-                                                <h4>Hack The Box</h4>
+                                                <p>Hack The Box</p>
                                             </div>
                                         </div>
                                     </div>

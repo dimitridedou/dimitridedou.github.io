@@ -50,7 +50,7 @@ function applyLanguage(lang) {
   document.getElementById("PlatformsTxt").innerHTML  = t.PlatformsTxt;
   document.getElementById("programmingLang").innerHTML  = t.programmingLang;
   document.getElementById("programmingLanguagesTxt").innerHTML  = t.programmingLanguagesTxt;
-
+  document.getElementById("skillsTitle").innerHTML  = t.skillsTitle;
 
 
   document.getElementById("educationTitle").innerHTML  = t.educationTitle;

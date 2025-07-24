@@ -44,15 +44,14 @@ function applyLanguage(lang) {
   document.getElementById("aboutme").innerHTML  = t.aboutme;
   document.getElementById("txtaboutme").innerHTML  = t.txtaboutme;
   document.getElementById("ChangeLanguage").innerHTML  = t.ChangeLanguage;
+  document.getElementById("os").innerHTML  = t.os;
+  document.getElementById("osTxt").innerHTML  = t.osTxt;
+  document.getElementById("Platforms").innerHTML  = t.Platforms;
+  document.getElementById("PlatformsTxt").innerHTML  = t.PlatformsTxt;
+  document.getElementById("programmingLanguages").innerHTML  = t.programmingLanguages;
+  document.getElementById("programmingLanguagesTxt").innerHTML  = t.programmingLanguagesTxt;
 
-  document.getElementById("skillsTitle").innerHTML  = t.skillsTitle;
-  const skillsList = document.getElementById("skillsList");
-  skillsList.innerHTML = "";
-  t.skills.forEach(skill => {
-    const li = document.createElement("li");
-    li.innerHTML  = skill;
-    skillsList.appendChild(li);
-  });
+
 
   document.getElementById("educationTitle").innerHTML  = t.educationTitle;
   const eduList = document.getElementById("educationList");

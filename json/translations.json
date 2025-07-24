@@ -1,0 +1,40 @@
+{
+  "el": {
+    "ChangeLanguage":"Επιλογή Γλώσσας",
+    "title": "Σχετικά με Εμένα",
+    "skillsTitle": "Δεξιότητες",
+    "skills": ["Python", "HTML", "CSS", "JavaScript"],
+    "educationTitle": "Εκπαίδευση",
+    "educationList": [
+      {
+        "degree": "Μηχανικών Πληροφορικής",
+        "school": "Πανεπιστήμιο Δυτικής Αττικής",
+        "years": "2018 - Σήμερα"
+      },
+      {
+        "degree": "Τεχνικός Εφαρμογών",
+        "school": "2ο ΕΠΑΛ Καλαμάτας",
+        "years": "Αποφοίτηση: 2018"
+      }
+    ]
+  },
+  "en": {
+    "ChangeLanguage":"Change Language",
+    "title": "About Me",
+    "skillsTitle": "Skills",
+    "skills": ["Python", "HTML", "CSS", "JavaScript"],
+    "educationTitle": "Education",
+    "educationList": [
+      {
+        "degree": "Computer Engineering",
+        "school": "University of West Attica",
+        "years": "2018 - Present"
+      },
+      {
+        "degree": "Applications Technician",
+        "school": "2nd EPAL Kalamata",
+        "years": "Graduated: 2018"
+      }
+    ]
+  }
+}

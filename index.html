@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="el">
     <head>
@@ -8,6 +9,7 @@
         <script src="https://grcodeclub.gr/js/data.js"></script>
         <meta property="og:title" content="Dedousis Dimitris - GrCode Club">
         <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/lag.js"></script>     
         <style>
             social{
                 text-decoration: none;
@@ -17,20 +19,27 @@
     </head>
     <body>
         <div id="addHeader"></div>
-        <div class="container">        
+        <div class="container">   
+<div class="mb-3">
+  <label for="language" id="ChangeLanguage" class="form-label" style="color: black;"></label>
+  <select id="language" class="form-select">
+   <option value="el"> {GR} Ελληνικά</option>
+  <option value="en"> {Eng} English</option>
+  </select>
+</div>
             <div class="row mt-6"> <!-- Αριστερή Στήλη (Κάρτα Προφίλ) -->
                 <div class="col-lg-4" style="position: relative;">
                     <div class="card shadow-sm">
                         <img id="profileImage" class="card-img-top d-block mx-auto" alt="Profile Picture" style="height: 250px; width:250px; object-fit: cover;" src="./files/profile.png">
                         <div class="card-body text-center">
-                            <h3 class="card-title">Προσωπικές Πληροφορίες</h3><br>
+                            <h3 class="card-title" id="info" style="text-align: center;"></h3><br>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" style="font-weight: bold;"><i class="fa fa-user"></i></span>
-                                <span class="input-group-text" id="myusername">ΔΕΔΟΥΣΗΣ ΔΗΜΗΤΡΙΟΣ</span>
+                                <span class="input-group-text" id="myusername"></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-venus-mars"></i></span>
-                                <span class="input-group-text" id="mygender">Άρρεν</span>
+                                <span class="input-group-text" id="mygender"></span>
                             </div>                        
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-calendar-alt  "></i></span>
@@ -70,20 +79,11 @@
                 <br><br>
                 <div class="col-lg-8 mb-4"> <!-- Δεξιά Στήλη (Πληροφορίες & Δεξιότητες) -->
                     <div class="card shadow-sm mb-4">
-                        <div class="card-header"><h2 style="text-align: center;">Σχετικά με Εμένα</h2></div>
-                        <div class="card-body">
-                            <p>Γεια σας! Είμαι ο Δημήτρης Δεδούσης, από το 2017 ασχολούμαι με την τεχνολογία, με κύριο προσανατολισμό το Development. Το πάθος μου για τη δημιουργία καινοτόμων λύσεων με ώθησε να εξειδικευτώ στην ανάπτυξη εφαρμογών, δίνοντας ιδιαίτερη έμφαση τόσο στη λειτουργικότητα όσο και στην ασφάλεια των έργων μου.
-                                <br><br>
-                                Πέρα από τον ρόλο μου ως Developer, ενδιαφέρομαι ιδιαίτερα για τον τρόπο λειτουργίας των δικτύων και την ασφάλεια στον κυβερνοχώρο (Cybersecurity). Το ενδιαφέρον μου για το Cybersecurity δεν είναι τυχαίο· αποσκοπεί στο να εφαρμόζω βέλτιστες πρακτικές και τεχνικές που διασφαλίζουν ότι τα projects μου, ειδικά όσα περιλαμβάνουν ευαίσθητα δεδομένα, παραμένουν ασφαλή και αξιόπιστα.
-                                <br><br>
-                                Συνδυάζοντας τις γνώσεις μου στην ανάπτυξη λογισμικού με τις αρχές της κυβερνοασφάλειας, στοχεύω να δημιουργώ λύσεις που ξεχωρίζουν όχι μόνο για την αποτελεσματικότητά τους, αλλά και για την προστασία που προσφέρουν στους χρήστες.
-                                <br><br>
-                                Ανυπομονώ να εξελίσσομαι συνεχώς και να συμβάλλω σε projects που κάνουν τη διαφορά στον κόσμο της τεχνολογίας!
-                                <br><br><strong>Δημήτρης Δεδούσης</strong>
-                            </p></div>                    </div>
+                        <div class="card-header"><h2 style="text-align: center;" id="aboutme"></h2></div>
+                        <div class="card-body" id="txtaboutme"></div></div>
                     
                     <div class="card shadow-sm mb-4">
-                        <div class="card-header"><h2 style="text-align: center;">Δεξιότητες</h2></div>
+                        <div class="card-header"><h2 style="text-align: center;" id="skillsTitle"></h2></div>
                         <div class="card-body">
                             <div class="row">
 
@@ -122,31 +122,13 @@
                     </div>
                     <div class="card shadow-sm mb-4">
                         <div class="card-header">
-                          <h2 style="text-align: center;">Εκπαίδευση</h2>
+                          <h2 style="text-align: center;" id="educationTitle"></h2>
                         </div>
-                        <div class="card-body" style="height: 400px; overflow-y: auto;">
-                              <!-- Card 1 -->
-                              <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">Μηχανικών Πληροφορικής και Υπολογιστών</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Πανεπιστήμιο Δυτικής Αττικής</h6>
-                                  <p class="card-text">2018 - Μέχρι σήμερα (Ενεργός φοιτητής)</p>
-                                </div>
-                              </div>
-                              <!-- Card 2 -->
-                              <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">Τεχνικός Εφαρμογών</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">2ο ΕΠΑΛ ΚΑΛΑΜΑΤΑΣ</h6>
-                                  <p class="card-text">Έτος αποφοίτησης: 2018</p>
-                                </div>
-                              </div>
-                            </div>
+                        <div class="card-body" style="height: 400px; overflow-y: auto;" id="educationList"></div>
                           </div>
                 </div>
             </div>
         </div>
         <div id="addFooter"></div>
-        <script src="./js/profileScript.js"></script>
     </body>
 </html>

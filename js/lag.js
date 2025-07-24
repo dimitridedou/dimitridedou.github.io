@@ -48,7 +48,7 @@ function applyLanguage(lang) {
   document.getElementById("osTxt").innerHTML  = t.osTxt;
   document.getElementById("Platforms").innerHTML  = t.Platforms;
   document.getElementById("PlatformsTxt").innerHTML  = t.PlatformsTxt;
-  document.getElementById("programmingLanguages").innerHTML  = t.programmingLanguages;
+  document.getElementById("programmingLang").innerHTML  = t.programmingLang;
   document.getElementById("programmingLanguagesTxt").innerHTML  = t.programmingLanguagesTxt;
 
 

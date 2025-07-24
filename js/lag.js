@@ -1,7 +1,7 @@
 let translations;
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./json/translations.json")
+  fetch("../json/translations.json")
     .then(response => response.json())
     .then(data => {
       translations = data;
@@ -43,7 +43,7 @@ function applyLanguage(lang) {
   document.getElementById("myusername").innerHTML = t.myusername;
   document.getElementById("aboutme").innerHTML  = t.aboutme;
   document.getElementById("txtaboutme").innerHTML  = t.txtaboutme;
-  document.getElementById("chang1").innerHTML  = t.chang1;
+  document.getElementById("ChangeLanguage").innerHTML  = t.ChangeLanguage;
 
   document.getElementById("skillsTitle").innerHTML  = t.skillsTitle;
   const skillsList = document.getElementById("skillsList");

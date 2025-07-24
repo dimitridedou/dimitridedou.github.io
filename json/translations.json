@@ -5,9 +5,10 @@
     "info": "Προσωπικές Πληροφορίες",
     "myusername": "Δημητρής Δεδούσης",
     "mygender": "Άρρεν",
+	      "educationTitle": "Εκπαίδευση",
+
     "skillsTitle": "Δεξιότητες",
     "skills": ["C", "Python", "HTML", "CSS", "JavaScript"],
-    "educationTitle": "Εκπαίδευση",
     "txtaboutme":"<p>Γεια σας! Είμαι ο Δημήτρης Δεδούσης, από το 2017 ασχολούμαι με την τεχνολογία, με κύριο προσανατολισμό το Development. Το πάθος μου για τη δημιουργία καινοτόμων λύσεων με ώθησε να εξειδικευτώ στην ανάπτυξη εφαρμογών, δίνοντας ιδιαίτερη έμφαση τόσο στη λειτουργικότητα όσο και στην ασφάλεια των έργων μου. <br><br> Πέρα από τον ρόλο μου ως Developer, ενδιαφέρομαι ιδιαίτερα για τον τρόπο λειτουργίας των δικτύων και την ασφάλεια στον κυβερνοχώρο (Cybersecurity). Το ενδιαφέρον μου για το Cybersecurity δεν είναι τυχαίο· αποσκοπεί στο να εφαρμόζω βέλτιστες πρακτικές και τεχνικές που διασφαλίζουν ότι τα projects μου, ειδικά όσα περιλαμβάνουν ευαίσθητα δεδομένα, παραμένουν ασφαλή και αξιόπιστα. <br><br> Συνδυάζοντας τις γνώσεις μου στην ανάπτυξη λογισμικού με τις αρχές της κυβερνοασφάλειας, στοχεύω να δημιουργώ λύσεις που ξεχωρίζουν όχι μόνο για την αποτελεσματικότητά τους, αλλά και για την προστασία που προσφέρουν στους χρήστες. <br><br> Ανυπομονώ να εξελίσσομαι συνεχώς και να συμβάλλω σε projects που κάνουν τη διαφορά στον κόσμο της τεχνολογίας! <br><br><strong>Δημήτρης Δεδούσης</strong></p>",
     "education": [
       {
@@ -23,10 +24,11 @@
     "myusername": "Dimitrios Dedousis",
     "mygender": "Male",
     "aboutme":"About Me",
+	      "educationTitle": "Education",
      "txtaboutme":"My name is Dimitris Dedoussis, and since 2017 I have been actively involved in website development, primarily using WordPress. I continuously evolve and learn new technologies, aiming to create functional and secure solutions. I place great emphasis on proper structure and performance. At the same time, I have a strong interest in networking and cybersecurity, which I incorporate into my projects whenever possible. My goal is to deliver reliable solutions that stand out.",
     "skillsTitle": "Skills",
+	  
     "skills": ["C", "Python", "HTML", "CSS", "JavaScript"],
-    "educationTitle": "Education",
     "education": [
       {
         "degree": "Computer Engineering",

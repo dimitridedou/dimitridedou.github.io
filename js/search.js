@@ -1,28 +1,28 @@
-let posts = []; // Αρχικά κενή λίστα
-  const postsPerPage = 10; // Αριθμός posts ανά σελίδα
+let project = []; // Αρχικά κενή λίστα
+  const projectPerPage = 10; // Αριθμός project ανά σελίδα
   let currentPage = 1;     // Τρέχουσα σελίδα
-  let filteredPosts = []; // Τα posts μετά από αναζήτηση
+  let filteredproject = []; // Τα project μετά από αναζήτηση
 
-  // Φόρτωση posts από το JSON αρχείο
-  fetch('./json/posts.json')
+  // Φόρτωση project από το JSON αρχείο
+  fetch('./json/project.json')
     .then(response => response.json())
     .then(data => {
-      posts = data; // Αποθήκευση των posts
-      filteredPosts = posts; // Ενημέρωση της λίστας φιλτραρισμένων posts
-      loadPosts(); // Φόρτωση των posts στην πρώτη σελίδα
+      project = data; // Αποθήκευση των project
+      filteredproject = project; // Ενημέρωση της λίστας φιλτραρισμένων project
+      loadproject(); // Φόρτωση των project στην πρώτη σελίδα
     })
-    .catch(error => console.error('Σφάλμα κατά την φόρτωση των posts:', error));
+    .catch(error => console.error('Σφάλμα κατά την φόρτωση των project:', error));
 
-  // Φόρτωση των posts σε κάθε σελίδα
-  function loadPosts(page = 1) {
-    const start = (page - 1) * postsPerPage;
-    const end = start + postsPerPage;
-    const postsToDisplay = filteredPosts.slice(start, end);
+  // Φόρτωση των project σε κάθε σελίδα
+  function loadproject(page = 1) {
+    const start = (page - 1) * projectPerPage;
+    const end = start + projectPerPage;
+    const projectToDisplay = filteredproject.slice(start, end);
 
-    const postsContainer = document.getElementById('postsContainer');
-    postsContainer.innerHTML = ''; // Καθαρισμός προηγούμενων posts
+    const projectContainer = document.getElementById('projectContainer');
+    projectContainer.innerHTML = ''; 
 
-    postsToDisplay.forEach((post, index) => {
+    projectToDisplay.forEach((post, index) => {
       const postHTML = `
         <div class="card mb-3 post-item">
           <div class="card-body">
@@ -31,21 +31,21 @@ let posts = []; // Αρχικά κενή λίστα
               ${post.content.substring(0, 100)}
               <span class="show-more"> ${post.content.substring(100)}</span>
             </div>
-            <a class="btn btn-primary btn-sm" href="${post.url}">Διαβάστε περισσότερα</a>
+            <a class="btn btn-dark btn-sm" href="${post.url}">Show Project</a>
           </div>
         </div>
       `;
-      postsContainer.innerHTML += postHTML;
+      projectContainer.innerHTML += postHTML;
     });
 
     // Ενημέρωση κουμπιών σελιδοποίησης
-    setupPagination(filteredPosts.length, page);
+    setupPagination(filteredproject.length, page);
   }
 
 
   // Δημιουργία κουμπιών σελιδοποίησης
-  function setupPagination(totalPosts, currentPage) {
-    const totalPages = Math.ceil(totalPosts / postsPerPage);
+  function setupPagination(totalproject, currentPage) {
+    const totalPages = Math.ceil(totalproject / projectPerPage);
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = ''; // Καθαρισμός προηγούμενων κουμπιών
 
@@ -53,7 +53,7 @@ let posts = []; // Αρχικά κενή λίστα
       const pageItem = document.createElement('li');
       pageItem.classList.add('page-item');
       pageItem.innerHTML = `
-        <button class="page-link ${i === currentPage ? 'active' : ''}" onclick="loadPosts(${i})">
+        <button class="page-link ${i === currentPage ? 'active' : ''}" onclick="loadproject(${i})">
           ${i}
         </button>
       `;
@@ -62,8 +62,8 @@ let posts = []; // Αρχικά κενή λίστα
   }
 
   // Λειτουργία Αναζήτησης
-  function searchPosts() {
+  function searchproject() {
     const input = document.getElementById('searchInput').value.toLowerCase();
-    filteredPosts = posts.filter(post => post.title.toLowerCase().includes(input));
-    loadPosts(1); // Επανεκκίνηση της σελιδοποίησης από την πρώτη σελίδα μετά την αναζήτηση
+    filteredproject = project.filter(post => post.title.toLowerCase().includes(input));
+    loadproject(1); // Επανεκκίνηση της σελιδοποίησης από την πρώτη σελίδα μετά την αναζήτηση
   }

@@ -1,28 +1,28 @@
-let project = []; // Αρχικά κενή λίστα
-  const projectPerPage = 10; // Αριθμός project ανά σελίδα
+let projects = []; // Αρχικά κενή λίστα
+  const postsPerPage = 7; // Αριθμός projects ανά σελίδα
   let currentPage = 1;     // Τρέχουσα σελίδα
-  let filteredproject = []; // Τα project μετά από αναζήτηση
+  let filteredPosts = []; // Τα projects μετά από αναζήτηση
 
-  // Φόρτωση project από το JSON αρχείο
-  fetch('./json/project.json')
+  // Φόρτωση projects από το JSON αρχείο
+  fetch('./json/projects.json')
     .then(response => response.json())
     .then(data => {
-      project = data; // Αποθήκευση των project
-      filteredproject = project; // Ενημέρωση της λίστας φιλτραρισμένων project
-      loadproject(); // Φόρτωση των project στην πρώτη σελίδα
+      projects = data; // Αποθήκευση των projects
+      filteredPosts = projects; // Ενημέρωση της λίστας φιλτραρισμένων projects
+      loadPosts(); // Φόρτωση των projects στην πρώτη σελίδα
     })
-    .catch(error => console.error('Σφάλμα κατά την φόρτωση των project:', error));
+    .catch(error => console.error('Σφάλμα κατά την φόρτωση των projects:', error));
 
   // Φόρτωση των project σε κάθε σελίδα
-  function loadproject(page = 1) {
-    const start = (page - 1) * projectPerPage;
-    const end = start + projectPerPage;
-    const projectToDisplay = filteredproject.slice(start, end);
+  function loadPosts(page = 1) {
+    const start = (page - 1) * postsPerPage;
+    const end = start + postsPerPage;
+    const postsToDisplay = filteredPosts.slice(start, end);
 
-    const projectContainer = document.getElementById('projectContainer');
-    projectContainer.innerHTML = ''; 
+    const postsContainer = document.getElementById('postsContainer');
+    postsContainer.innerHTML = ''; 
 
-    projectToDisplay.forEach((post, index) => {
+    postsToDisplay.forEach((post, index) => {
       const postHTML = `
         <div class="card mb-3 post-item">
           <div class="card-body">
@@ -30,22 +30,22 @@ let project = []; // Αρχικά κενή λίστα
             <div class="post-content" id="post-content-${index}">
               ${post.content.substring(0, 100)}
               <span class="show-more"> ${post.content.substring(100)}</span>
-            </div>
-            <a class="btn btn-dark btn-sm" href="${post.url}">Show Project</a>
+            </div><br>
+            <a class="btn btn-dark btn-sm" href="${post.url}">Open Project</a>
           </div>
         </div>
       `;
-      projectContainer.innerHTML += postHTML;
+      postsContainer.innerHTML += postHTML;
     });
 
     // Ενημέρωση κουμπιών σελιδοποίησης
-    setupPagination(filteredproject.length, page);
+    setupPagination(filteredPosts.length, page);
   }
 
 
   // Δημιουργία κουμπιών σελιδοποίησης
-  function setupPagination(totalproject, currentPage) {
-    const totalPages = Math.ceil(totalproject / projectPerPage);
+  function setupPagination(totalPosts, currentPage) {
+    const totalPages = Math.ceil(totalPosts / postsPerPage);
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = ''; // Καθαρισμός προηγούμενων κουμπιών
 
@@ -53,17 +53,17 @@ let project = []; // Αρχικά κενή λίστα
       const pageItem = document.createElement('li');
       pageItem.classList.add('page-item');
       pageItem.innerHTML = `
-        <button class="page-link ${i === currentPage ? 'active' : ''}" onclick="loadproject(${i})">
+        <a class="btn btn-dark  ${i === currentPage ? 'active' : ''}" onclick="loadPosts(${i})">
           ${i}
-        </button>
+        </a>
       `;
       paginationContainer.appendChild(pageItem);
     }
   }
 
   // Λειτουργία Αναζήτησης
-  function searchproject() {
+  function searchPosts() {
     const input = document.getElementById('searchInput').value.toLowerCase();
-    filteredproject = project.filter(post => post.title.toLowerCase().includes(input));
-    loadproject(1); // Επανεκκίνηση της σελιδοποίησης από την πρώτη σελίδα μετά την αναζήτηση
+    filteredPosts = projects.filter(post => post.title.toLowerCase().includes(input));
+    loadPosts(1); // Επανεκκίνηση της σελιδοποίησης από την πρώτη σελίδα μετά την αναζήτηση
   }

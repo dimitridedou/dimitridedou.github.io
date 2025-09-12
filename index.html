@@ -8,59 +8,53 @@
         <link rel="stylesheet" href="./css/style.css">
         <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
         <style>
-            social{
-                text-decoration: none;
-                color: black;
+            .card-header{
+                background-color: #212529 !important;
+                color: white !important;
+            }
+            .page-item.active .page-link{
+                background-color: #212529 !important;
+                color: white !important;
             }
         </style>
     </head>
     <body>
         <div id="addHeader"></div>
-        <div class="container">   
-<div class="mb-3">
-  <label for="language" id="ChangeLanguage" class="form-label" style="color: black;"></label>
-  <select id="language" class="form-select">
-   <option value="el"> {GR} Ελληνικά</option>
-  <option value="en"> {Eng} English</option>
-  </select>
-</div>
+        <div class="container">
+            <div class="text-end mb-3"><a href="./eng" class="btn btn-sm btn-outline-dark"><i class="fa fa-globe"></i> English</a></div>
             <div class="row mt-6"> <!-- Αριστερή Στήλη (Κάρτα Προφίλ) -->
                 <div class="col-lg-4" style="position: relative;">
                     <div class="card shadow-sm">
                         <img id="profileImage" class="card-img-top d-block mx-auto" alt="Profile Picture" style="height: 250px; width:250px; object-fit: cover;" src="./files/profile.png">
                         <div class="card-body text-center">
-                            <h3 class="card-title" id="info" style="text-align: center;"></h3><br>
+                            <h3 class="card-title" id="info" style="text-align: center;">ΔΕΔΟΥΣΗΣ ΔΗΜΗΤΡΙΟΣ</h3><br>
                             <div class="input-group mb-3">
-                                <span class="input-group-text" style="font-weight: bold;"><i class="fa fa-user"></i></span>
-                                <span class="input-group-text" id="myusername"></span>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="fa fa-venus-mars"></i></span>
-                                <span class="input-group-text" id="mygender"></span>
+                                <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                                <span class="input-group-text">Αθήνα</span>
                             </div>                        
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
-                                <span class="input-group-text" id="myage">11/06/2000</span>
+                                <span class="input-group-text">11/06/2000</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                                <span class="input-group-text" id="myemail"><a class="social" href= "mailto: dedoudimitrios@gmail.com">dedoudimitrios@gmail.com</a></span>
+                                <span class="input-group-text"><a class="social" href= "mailto: dedoudimitrios@gmail.com">dedoudimitrios@gmail.com</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fa fa-phone  "></i></span>
-                                <span class="input-group-text" id="telephone">69</span>
+                                <span class="input-group-text">69</span>
                             </div>  
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-facebook "></i></span>
-                                <span class="input-group-text" id="facebookLink"><a class="social" href="https://www.facebook.com/dimitridedou">Dimitris Dedousis</a></span>
+                                <span class="input-group-text"><a class="social" href="https://www.facebook.com/dimitridedou">Dimitris Dedousis</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-instagram "></i></span>
-                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://www.instagram.com/dimitri.dedou">dimitri.dedou</a></span>
+                                <span class="input-group-text"><a class="social" href="https://www.instagram.com/dimitri.dedou">dimitri.dedou</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-github "></i></span>
-                                <span class="input-group-text" id="instagramLink"><a class="social" href="https://github.com/dimitridedou">dimitridedou</a></span>
+                                <span class="input-group-text"><a class="social" href="https://github.com/dimitridedou">dimitridedou</a></span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fab fa-linkedin "></i></span>
@@ -76,39 +70,56 @@
                 <br><br>
                 <div class="col-lg-8 mb-4"> <!-- Δεξιά Στήλη (Πληροφορίες & Δεξιότητες) -->
                     <div class="card shadow-sm mb-4">
-                        <div class="card-header"><h2 style="text-align: center;" id="aboutme"></h2></div>
-                        <div class="card-body" id="txtaboutme"></div></div>
+                        <div class="card-header"><h2 style="text-align: center;">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</h2></div>
+                        <div class="card-body" style="text-align: justify;">Ξεκίνησα να ασχολούμαι ερασιτεχνικά με το Web Development το 2023, εστιάζοντας στο WordPress για τη δημιουργία ασφαλών, λειτουργικών και αποδοτικών ιστοσελίδων. Από το 2024 δραστηριοποιούμαι ενεργά και στη δημιουργία περιεχομένου για Social Media, με στόχο την εκπαίδευση και την ενημέρωση γύρω από θέματα τεχνολογίας. Παράλληλα, συνεχίζω να εξελίσσομαι, διευρύνοντας τις γνώσεις και τις δεξιότητές μου στον τομέα της κατασκευής και βελτιστοποίησης ιστοσελίδων. </div>
+                    </div>
                     
                     <div class="card shadow-sm mb-4">
-                        <div class="card-header"><h2 style="text-align: center;" id="skillsTitle"></h2></div>
+                        <div class="card-header"><h2 style="text-align: center;">ΙΚΑΝΟΤΗΤΕΣ</h2></div>
                         <div class="card-body">
                             <div class="row">
-
                                 <div class="accordion" id="roadmapAccordion">
-            
                                     <div class="accordion-item">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#programmingLanguages" aria-expanded="true" aria-controls="programmingLanguages" id="programmingLang"></button>
-                                        <div id="programmingLanguages" class="accordion-collapse collapse show" aria-labelledby="programmingLanguages" data-bs-parent="#roadmapAccordion">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#programmingLanguages" aria-expanded="true" aria-controls="programmingLanguages" id="programmingLang">Soft Skills</button>
+                                        <div id="programmingLanguages" class="accordion-collapse collapse" aria-labelledby="programmingLanguages" data-bs-parent="#roadmapAccordion">
                                         <div class="accordion-body">
-                                           <p id="programmingLanguagesTxt"></p>                                        
+                                           <p>Ομαδικότητα, Υπευθυνότητα, Επικοινωνία, Οργάνωση Χρόνου και Δημιουργικότητα </p>                                       
                                         </div>
                                         </div>
                                     </div>
 
                                       <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#operatingsystem" aria-expanded="false" aria-controls="operatingsystem" id="os"></button>
-                                        <div id="operatingsystem" class="accordion-collapse collapse" aria-labelledby="operatingsystem" data-bs-parent="#roadmapAccordion">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#programming" aria-expanded="false" aria-controls="programming" id="programming">Γλώσσες Προγραμματισμού </button>
+                                        <div id="programming" class="accordion-collapse collapse" aria-labelledby="programming" data-bs-parent="#roadmapAccordion">
                                             <div class="accordion-body">
-                                                <p id="osTxt"></p>
+                                                <p>Python, Html, CSS, JavaScript, Php, C, Java</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms" id="Platforms"></button>
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms" id="Platforms">Λογισμικό & Εργαλεία</button>
                                         <div id="platforms" class="accordion-collapse collapse" aria-labelledby="platforms" data-bs-parent="#roadmapAccordion">
                                             <div class="accordion-body">
-                                                <p id="PlatformsTxt"></p>
+                                                <p>Photoshop, CapCut</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Social" aria-expanded="false" aria-controls="Social" id="Social">Social Media Πλατφόρμες</button>
+                                        <div id="Social" class="accordion-collapse collapse" aria-labelledby="Social" data-bs-parent="#roadmapAccordion">
+                                            <div class="accordion-body">
+                                                <p>Facebook, Instagram, TikTok και YouTube</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#os" aria-expanded="false" aria-controls="os" id="os">Λειτουργικά Συστήματα</button>
+                                        <div id="os" class="accordion-collapse collapse" aria-labelledby="os" data-bs-parent="#roadmapAccordion">
+                                            <div class="accordion-body">
+                                                <p>Linux, Microsoft Windows</p>
                                             </div>
                                         </div>
                                     </div>
@@ -118,24 +129,51 @@
                     </div>
                     <div class="card shadow-sm mb-4">
                         <div class="card-header">
-                          <h2 style="text-align: center;" id="educationTitle"></h2>
+                          <h2 style="text-align: center;" id="educationTitle">ΕΚΠΑΙΔΕΥΣΗ</h2>
                         </div>
-                        <div class="card-body" style="height: 400px; overflow-y: auto;" id="educationList"></div>
+                        <div class="card-body" style="height: 400px; overflow-y: auto;" id="educationList">
+                            <p>
+                                <h4>Πανεπιστήμιο Δυτικής Αττικής,Τμήμα Πληροφορικής και Μηχανικών Υπολογιστών</h4><br>
+                                Σεπτ. 2018 – έως και σήμερα<br>
+                                Ενεργός Φοιτητής<br>
+                                <br><br>
+                                <h4>2ο ΕΠΑΛ Καλαμάτας, Τεχνικός Εφαρμογών Πληροφορικής</h4><br>
+                                Σεπτ. 2015 – Ιούνιος 2018<br>
+                                Βαθμός: 19.9<br>
+                                Πτυχίο Επιπέδου 4
+
+                            </p>
+                        </div>
                           </div>
 
                 </div>
-                <h2 style="text-align: center;">My Project</h2>
-  
-  <!-- Πεδίο Αναζήτησης -->
-<input type="text" id="searchInput" class="form-control mb-4" placeholder="Αναζήτηση..." onkeyup="searchPosts()">
-  <!-- Περιοχή Project -->
-<div id="postsContainer"></div>
-  <!-- Σελιδοποίηση -->
-<nav><ul id="pagination" class="pagination"></ul></nav>
-<script src="./js/search.js"></script>
+                <div class="card shadow-sm mb-4" style="height: 100%;">
+                    <div class="card-header bg-dark text-white"><h2 style="text-align: center;">My Project</h2></div>
+                    <br><input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση"><br><br>
+                    <table id="search_table_page" class="table table-bordered">
+                        <colgroup><col style="width:15%"><col style="width:80%;"><col style="width:5%"></colgroup>
+                        <tr id="title-table"><th>Ονομα Project</th><th>Περιγραφή</th><th>Link</th></tr>
+                        <tr><td>GrCode Club</td>
+                            <td>
+                                Πρόκειται για ένα project που ξεκίνησα το 2024 με στόχο τη δημιουργία και διάθεση εκπαιδευτικού υλικού στα ελληνικά, με κύρια θεματολογία τον Development, τα Δίκτυα Υπολογιστών και το Cybersecurity. 
+                                Παράλληλα, μέσα από τα social media προσπαθούμε να δημιουργήσουμε μια ενεργή κοινότητα ανθρώπων που μοιράζονται το ίδιο πάθος για την τεχνολογία και τον προγραμματισμό.
+                                <br>Το περιεχόμενο διανέμεται μέσα από τις παρακάτω πλατφόρμες:
+                                <ol>
+                                    <li><a href="https://grcodeclub.gr/" target="_blank">Website</a></li>
+                                    <li><a href="https://www.youtube.com/@grcodeclub-official" target="_blank">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/grcode.club/" target="_blank">Instagram</a></li>
+                                    <li><a href="https://www.tiktok.com/@grcode.club" target="_blank">TikTok</a></li>
+                                </ol>
+                            </td><td><a href="https://grcodeclub.gr/" target="_blank" class="btn btn-sm btn-dark">Visit</a></td></tr>
+                        <tr><td>wp-plugins-allone</td><td>Ανέπτυξα το πρώτο μου custom WordPress plugin, το οποίο προσθέτει ολοκληρωμένο περιβάλλον διαχείρισης μέσα στο WP Admin. Περιλαμβάνει dashboard με στατιστικά συστήματος και βάσης δεδομένων, καταγραφή ενεργειών χρηστών και plugins, file browser, shortcode editor καθώς και σελίδες ρυθμίσεων με custom options. Μέσα από το project αυτό εξοικειώθηκα με το WordPress Hooks, MySQL queries και PHP/HTML/CSS.</td><td><a href="https://github.com/dimitridedou/wp-plugins-allone" target="_blank" class="btn btn-sm btn-dark">Visit</a></td></tr>
+                        <tr><td>CTF With Docker</td><td>Εκπαιδευτικό έργο που συνδυάζει θεωρητικό (Docker, CTFs, εξειδικευμένα εργαλεία) με πρακτικές ασκήσεις σε περιβάλλοντα Docker. Στόχος είναι η παροχή βασικής εξοικείωσης με τη χρήση εργαλείων και η ανάπτυξη πρακτικών δεξιοτήτων.</td><td><a href="https://github.com/dimitridedou/CTF-With-Docker" target="_blank" class="btn btn-sm btn-dark">Visit</a></td></tr>
+                        <tr><td>Docker stack swarm</td><td>Δημιουργήσαμε ένα repo στο GitHub με αρχεία YAML για την εγκατάσταση και διαχείριση του Docker Swarm, αυτοματοποιώντας τη διαδικασία ανάπτυξης διάφορων υπηρεσιών.</td><td><a href="https://github.com/dimitridedou/docker-stack-swarm" target="_blank" class="btn btn-sm btn-dark">Visit</a></td></tr>
+                        <tr><td></td><td></td><td></td></tr>
+                    </table>
+                    <div class="pagination" id="pagination"></div>
+                </div>                
             </div>
         </div>
-        <script src="./js/lag.js" defer></script>
         <div id="addFooter"></div>
     </body>
 </html>

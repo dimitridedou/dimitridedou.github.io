@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById("searchInput");
     const filterSelect = document.getElementById("filterSelect");
     const table = document.getElementById("search");
     const rows = table.getElementsByTagName("tr");
 
     function filterTable() {
-        const searchText = searchInput.value.toLowerCase();
         const selectedLang = filterSelect.value.toLowerCase();
 
         for (let i = 1; i < rows.length; i++) {
@@ -13,17 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const cells = row.getElementsByTagName("td");
 
             if (cells.length > 0) {
-                const rowText = row.textContent.toLowerCase();
                 const rowLang = row.getAttribute("data-lang")?.toLowerCase() || "";
 
-                const matchSearch = rowText.includes(searchText);
+                // Εμφανίζει τη γραμμή αν δεν έχει επιλεγεί φίλτρο
+                // ή αν το data-lang περιέχει την τιμή του φίλτρου
                 const matchLang = selectedLang === "" || rowLang.includes(selectedLang);
 
-                row.style.display = matchSearch && matchLang ? "" : "none";
+                row.style.display = matchLang ? "" : "none";
             }
         }
     }
 
-    searchInput.addEventListener("keyup", filterTable);
+    // Όποτε αλλάζει το dropdown → φιλτράρει
     filterSelect.addEventListener("change", filterTable);
 });

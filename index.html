@@ -7,9 +7,9 @@
         <meta property="og:title" content="Dedousis Dimitris">
         <link rel="stylesheet" href="./css/style.css">
         <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-        <meta property="og:image" content="https://dimitridedou.github.io/files/prieview.png"/>
+        <meta property="og:image" content="https://dimitridedou.github.io-main/files/prieview.png"/>
         <meta property="og:title" content="Dedousis Dimitris">
-<style>
+        <style>
             .card-header{
                 background-color: #212529 !important;
                 color: white !important;
@@ -23,9 +23,11 @@
     <body>
         <div id="addHeader"></div>
         <div class="container">
-            <div class="row mt-6 shadow-sm"> <!-- Αριστερή Στήλη (Κάρτα Προφίλ) -->
+            <div class="row mt-6 shadow-sm"> 
+                <!-- Αριστερή Στήλη -->
                 <div class="col-lg-4" style="position: relative;" >
-                    <div class="card shadow-lg"><img id="profileImage" class="card-img-top rounded-circle mx-auto mt-3"src="./files/profile.png" alt="Profile Picture" style="height: 220px; width: 220px; object-fit: cover; border: 3px solid #212529;">                        <div class="card-body text-center">
+                    <div class="card shadow-lg" style="margin-bottom: 5%;"><img id="profileImage" class="card-img-top rounded-circle mx-auto mt-3"src="./files/profile.png" alt="Profile Picture" style="height: 220px; width: 220px; object-fit: cover; border: 3px solid #212529;">                        
+                        <div class="card-body text-center">
                             <h3 class="card-title" id="info" style="text-align: center;">ΔΕΔΟΥΣΗΣ ΔΗΜΗΤΡΙΟΣ</h3><br>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex align-items-center"><i class="fa fa-map-marker me-2 text-danger"></i>Νίκαια, Αττικής </li>
@@ -38,10 +40,24 @@
                                 <li class="list-group-item d-flex align-items-center"><i class="fab fa-linkedin me-2 text-primary"></i><a href="https://www.linkedin.com/in/dimitridedou/" class="text-decoration-none">Dimitris Dedousis</a></li>
                                 <li class="list-group-item d-flex align-items-center"><span class="me-2">✖</span><a href="https://x.com/dimitridedou" class="text-decoration-none">Dimitris Dedousis</a></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header"><h2 style="text-align: center;" id="educationTitle"><img  src="https://grcodeclub.gr/files-page/logo/logo-head.webp"></h2></div>
+                        <div class="card-body">
+                           <p style="text-align: center;">Πρόκειται για ένα project που ξεκίνησα το 2024 με στόχο τη δημιουργία και διάθεση εκπαιδευτικού υλικού στα ελληνικά, με κύρια θεματολογία τον Development, τα Δίκτυα Υπολογιστών και το Cybersecurity. Παράλληλα, μέσα από τα social media προσπαθούμε να δημιουργήσουμε μια ενεργή κοινότητα ανθρώπων που μοιράζονται το ίδιο πάθος για την τεχνολογία και τον προγραμματισμό.</p>
+                            <div style="text-align: center;">
+                                <a href="https://grcodeclub.gr/" target="_blank" class="btn btn-outline-dark btn-sm m-1"><i class="fas fa-globe me-1"></i> Website</a>
+                                <a href="https://www.youtube.com/@grcodeclub-official" target="_blank" class="btn btn-outline-danger btn-sm m-1"><i class="fab fa-youtube me-1"></i> YouTube</a>
+                                <a href="https://www.instagram.com/grcode.club/" target="_blank" class="btn btn-outline-danger btn-sm m-1"><i class="fab fa-instagram me-1"></i> Instagram</a>
+                                <a href="https://www.tiktok.com/@grcode.club" target="_blank" class="btn btn-outline-dark btn-sm m-1"><i class="fab fa-tiktok me-1"></i> TikTok</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <br><br>
-                <div class="col-lg-8 mb-4"> <!-- Δεξιά Στήλη (Πληροφορίες & Δεξιότητες) -->
+
+                <!-- Δεξιά Στήλη (Πληροφορίες & Δεξιότητες ...) -->
+                <div class="col-lg-8 mb-4">
                     <div class="card shadow-lg mb-4">
                         <div class="card-header bg-dark text-white text-center fw-bold"><h2 style="text-align: center;">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</h2></div>
                         <div class="card-body" style="text-align: justify;">Ξεκίνησα να ασχολούμαι ερασιτεχνικά με το Web Development το 2023, εστιάζοντας στο WordPress για τη δημιουργία ασφαλών, λειτουργικών και αποδοτικών ιστοσελίδων. Από το 2024 δραστηριοποιούμαι ενεργά και στη δημιουργία περιεχομένου για Social Media, με στόχο την εκπαίδευση και την ενημέρωση γύρω από θέματα τεχνολογίας. Παράλληλα, συνεχίζω να εξελίσσομαι, διευρύνοντας τις γνώσεις και τις δεξιότητές μου στον τομέα της κατασκευής και βελτιστοποίησης ιστοσελίδων. </div>
@@ -54,87 +70,79 @@
                                     <div class="accordion-item">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#myskills" aria-expanded="true" aria-controls="myskills" id="skills">Soft Skills</button>
                                         <div id="myskills" class="accordion-collapse collapse" aria-labelledby="myskills" data-bs-parent="#roadmapAccordion">
-                                        <div class="accordion-body">
-                                            <div class="row">
-  <div class="col-md-6">
-    <ul class="list-unstyled">
-    <li><i class="fa fa-check text-dark me-2"></i>Ομαδικότητα</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Κριτική σκέψη</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Υπευθυνότητα</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Επικοινωνία</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Προσαρμοστικότητα</li>
-
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <ul class="list-unstyled">
-    <li><i class="fa fa-check text-dark me-2"></i>Δημιουργικότητα</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Διαχείριση χρόνου</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Προσοχή στη λεπτομέρεια</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Ηγετικές ικανότητες</li>
-    <li><i class="fa fa-check text-dark me-2"></i>Διάθεση για συνεχή μάθηση</li>
-    </ul>
-  </div>
-</div>
-                                   
-                                        </div>
-                                        </div>
-                                    </div>
-
-                                      <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#programming" aria-expanded="false" aria-controls="programming" id="programminglist">Γλώσσες Προγραμματισμού </button>
-                                        <div id="programming" class="accordion-collapse collapse" aria-labelledby="programming" data-bs-parent="#roadmapAccordion">
                                             <div class="accordion-body">
-                                                    <h3>
-                                                          <a href="#" class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-python me-1" style="color:#3776AB;"></i>Python</a>
-                                                          <span class="badge bg-dark text-white m-1"><i class="fab fa-html5 me-1 text-danger"></i>HTML</span>
-                                                          <span class="badge bg-dark text-white m-1"><i class="fab fa-css3-alt me-1 text-primary"></i>CSS</span>
-                                                          <a href="https://github.com/dimitridedou/javascript" target="_blank" class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-js-square me-1" style="color:#f7df1e;"></i>JavaScript</a>
-                                                          <a href="https://github.com/dimitridedou/php" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-php me-1" style="color:#787CB5;"></i>PHP</a>
-                                                          <span class="badge bg-dark text-white m-1"><i class="fas fa-code me-1 text-info"></i>C</span>
-                                                          <a href="https://github.com/dimitridedou/java" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-java me-1 text-danger"></i>Java</a>
-                                                    </h3>                                                    
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                      <ul class="list-unstyled">
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Ομαδικότητα</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Κριτική σκέψη</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Υπευθυνότητα</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Επικοινωνία</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Προσαρμοστικότητα</li>
+                                                      </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                      <ul class="list-unstyled">
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Δημιουργικότητα</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Διαχείριση χρόνου</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Προσοχή στη λεπτομέρεια</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Ηγετικές ικανότητες</li>
+                                                        <li><i class="fa fa-check text-dark me-2"></i>Διάθεση για συνεχή μάθηση</li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#programming" aria-expanded="false" aria-controls="programming" id="programminglist">Γλώσσες Προγραμματισμού </button>
+                                        <div id="programming" class="accordion-collapse collapse" aria-labelledby="programming" data-bs-parent="#roadmapAccordion">
+                                            <div class="accordion-body">
+                                                <h4>
+                                                    <span class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-python me-1" style="color:#3776AB;"></i>Python</span>
+                                                    <span class="badge bg-dark text-white m-1"><i class="fab fa-html5 me-1 text-danger"></i>HTML</span>
+                                                    <span class="badge bg-dark text-white m-1"><i class="fab fa-css3-alt me-1 text-primary"></i>CSS</span>
+                                                    <a href="https://github.com/dimitridedou/javascript" target="_blank" class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-js-square me-1" style="color:#f7df1e;"></i>JavaScript</a>
+                                                    <a href="https://github.com/dimitridedou/php" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-php me-1" style="color:#787CB5;"></i>PHP</a>
+                                                    <a href="https://github.com/dimitridedou/java" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-java me-1 text-danger"></i>Java</a>
+                                                    <span class="badge bg-dark text-white m-1"><i class="fas fa-code me-1 text-info"></i>C</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="accordion-item">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms" id="Platforms">Λογισμικό & Εργαλεία</button>
                                         <div id="platforms" class="accordion-collapse collapse" aria-labelledby="platforms" data-bs-parent="#roadmapAccordion">
                                             <div class="accordion-body">
                                                 <span class="badge bg-primary m-1"><i class="fas fa-image me-1"></i>Photoshop</span>
-<span class="badge bg-dark m-1"><i class="fas fa-film me-1"></i>CapCut</span>
-
+                                                <span class="badge bg-dark m-1"><i class="fas fa-film me-1"></i>CapCut</span>
                                             </div>
                                         </div>
                                     </div>
-                                <div class="accordion-item">
+                                    <div class="accordion-item">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Social" aria-expanded="false" aria-controls="Social" id="Social-heading">Social Media Πλατφόρμες</button>
                                         <div id="Social" class="accordion-collapse collapse" aria-labelledby="Social-heading" data-bs-parent="#roadmapAccordion">
-                                          <div class="accordion-body">
-                                            <span class="badge bg-primary m-1"><i class="fab fa-facebook me-1"></i>Facebook</span>
-<span class="badge bg-danger m-1"><i class="fab fa-instagram me-1"></i>Instagram</span>
-<span class="badge bg-dark m-1"><i class="fab fa-tiktok me-1"></i>TikTok</span>
-<span class="badge bg-danger m-1"><i class="fab fa-youtube me-1"></i>YouTube</span>
-                                          </div>
+                                            <div class="accordion-body">
+                                                  <span class="badge bg-primary m-1"><i class="fab fa-facebook me-1"></i>Facebook</span>
+                                                  <span class="badge bg-danger m-1"><i class="fab fa-instagram me-1"></i>Instagram</span>
+                                                  <span class="badge bg-dark m-1"><i class="fab fa-tiktok me-1"></i>TikTok</span>
+                                                  <span class="badge bg-danger m-1"><i class="fab fa-youtube me-1"></i>YouTube</span>
+                                            </div>
                                         </div>
                                     </div>
-                                <div class="accordion-item">
-                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#os" aria-expanded="false" aria-controls="os" id="os-heading">
-                                        Λειτουργικά Συστήματα
-                                      </button>
-                                      <div id="os" class="accordion-collapse collapse" aria-labelledby="os-heading" data-bs-parent="#roadmapAccordion">
-                                        <div class="accordion-body">
-                                          <span class="badge bg-dark m-1"><i class="fab fa-linux me-1"></i>Linux</span>
-<span class="badge bg-primary m-1"><i class="fab fa-windows me-1"></i>Windows</span>
-
-                                        </div>
-                                      </div>
+                                    <div class="accordion-item">
+                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#os" aria-expanded="false" aria-controls="os" id="os-heading">Λειτουργικά Συστήματα</button>
+                                          <div id="os" class="accordion-collapse collapse" aria-labelledby="os-heading" data-bs-parent="#roadmapAccordion">
+                                                <div class="accordion-body">
+                                                    <span class="badge bg-dark m-1"><i class="fab fa-linux me-1"></i>Linux</span>
+                                                    <span class="badge bg-primary m-1"><i class="fab fa-windows me-1"></i>Windows</span>
+                                                </div>
+                                          </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
                     <div class="card shadow-lg mb-4">
                         <div class="card-header">
                           <h2 style="text-align: center;" id="educationTitle">ΕΚΠΑΙΔΕΥΣΗ</h2>
@@ -142,46 +150,53 @@
                         <div class="card-body" style="max-height: 400px; overflow-y: auto;" id="educationList">
                            <ul class="list-group list-group-flush">
                               <li class="list-group-item border-0">
-                                <h5 class="fw-bold">Πανεπιστήμιο Δυτικής Αττικής</h5>
-                                <small class="text-muted">2018 – Σήμερα</small><br>
-                                Φοιτητής στο Τμήμα Πληροφορικής & Μηχανικών Υπολογιστών
+                                    <h5 class="fw-bold">Πανεπιστήμιο Δυτικής Αττικής</h5>
+                                    <small class="text-muted">2018 – Σήμερα</small><br>
+                                    Φοιτητής στο Τμήμα Πληροφορικής & Μηχανικών Υπολογιστών
                               </li>
                               <li class="list-group-item border-0">
-                                <h5 class="fw-bold">2ο ΕΠΑΛ Καλαμάτας</h5>
-                                <small class="text-muted">2015 – 2018</small><br>
-                                Τεχνικός Εφαρμογών Πληροφορικής – Βαθμός: 19.9
+                                    <h5 class="fw-bold">2ο ΕΠΑΛ Καλαμάτας</h5>
+                                    <small class="text-muted">2015 – 2018</small><br>
+                                    Τεχνικός Εφαρμογών Πληροφορικής – Βαθμός: 19.9
                               </li>
                             </ul>
                         </div>
                     </div>
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header"><h2 style="text-align: center;" id="educationTitle">ΣΥΝΕΔΡΙΑ</h2></div>
+                        <div class="card-body" style="max-height: 400px; overflow-y: auto;" id="educationList">
+                           <ul class="list-group list-group-flush">
+                              <li class="list-group-item border-0">
+                                    <h5 class="fw-bold">Security BSides Athens 2025</h5>
+                                    <small class="text-muted">28/06/2025</small><br>
+                                    Συμμετείχα εθελοντικά στη διοργάνωση του συνεδρίου, με αρμοδιότητες στη διαχείριση του OBS και τον συντονισμό της ροής του podcast.
+                              </li>
+                              <li class="list-group-item border-0">
+                                    <h5 class="fw-bold d-flex align-items-center">  Security BSides Athens 2024 <a href="https://drive.google.com/file/d/1RP6i3fCmQw7duM02F0CD7Cj3zfMb_ako/view?usp=drive_link" target="_blank" class="btn btn-outline-danger btn-sm ms-3"><i class="fas fa-file-pdf me-1"></i> Προβολή</a></h5>                                <small class="text-muted">29/06/202</small><br>
+                                    Συμμετείχα ως εθελοντής στη διοργάνωση του συνεδρίου, με κύρια ευθύνη τη διανομή εισιτηρίων στους συμμετέχοντες.
+                              </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card shadow-lg mb-4" style="height: 100%;">
                     <div class="card-header bg-dark text-white"><h2 style="text-align: center;">My Project</h2></div><br>
                     <div class="mb-3">
-                     <span class="input-group-text"><i class="fas fa-filter" style=" margin-left: 10%;" ></i>
-                      <select id="filterSelect" class="form-select rounded-pill" style="width: 80%; margin-left: 1%;">
-                        <option value="">Όλα</option>
-                        <option value="HTML/CSS/JS">HTML/CSS/JS</option>
-                        <option value="PHP">PHP</option>
-                        <option value="Docker">Docker</option>
-                        <option value="WordPress">WordPress</option>
-                        <option value="Social_Media">Social Media</option>
-                        <option value="Python">Python</option>
-                      </select></span>
+                        <span class="input-group-text"><i class="fas fa-filter" style=" margin-left: 10%;" ></i>
+                            <select id="filterSelect" class="form-select rounded-pill" style="width: 80%; margin-left: 1%;">
+                              <option value="">Όλα</option>
+                              <option value="HTML/CSS/JS">HTML/CSS/JS</option>
+                              <option value="PHP">PHP</option>
+                              <option value="Docker">Docker</option>
+                              <option value="WordPress">WordPress</option>
+                              <option value="Social_Media">Social Media</option>
+                              <option value="Python">Python</option>
+                            </select>
+                        </span>
                     </div>
                     <table id="search" class="table table-bordered table-striped table-hover align-middle">
                         <colgroup><col style="width:15%"><col style="width:80%"><col style="width:5%"></colgroup>
                         <tr id="title-table"><th>Ονομα Project</th><th>Περιγραφή</th><th>Link</th></tr>
-                        <tr data-lang="HTML/CSS/JS Social_Media"><td>GrCode Club</td><td>Πρόκειται για ένα project που ξεκίνησα το 2024 με στόχο τη δημιουργία και διάθεση εκπαιδευτικού υλικού στα ελληνικά, με κύρια θεματολογία τον Development, τα Δίκτυα Υπολογιστών και το Cybersecurity. 
-                                                      Παράλληλα, μέσα από τα social media προσπαθούμε να δημιουργήσουμε μια ενεργή κοινότητα ανθρώπων που μοιράζονται το ίδιο πάθος για την τεχνολογία και τον προγραμματισμό.
-                                                      <br>Το περιεχόμενο διανέμεται μέσα από τις παρακάτω πλατφόρμες:
-                                                      <ol>
-                                                          <li><a href="https://grcodeclub.gr/" target="_blank">Website</a></li>
-                                                          <li><a href="https://www.youtube.com/@grcodeclub-official" target="_blank">YouTube</a></li>
-                                                          <li><a href="https://www.instagram.com/grcode.club/" target="_blank">Instagram</a></li>
-                                                          <li><a href="https://www.tiktok.com/@grcode.club" target="_blank">TikTok</a></li>
-                                                      </ol></td><td><a href="https://grcodeclub.gr/" target="_blank" class="btn btn-sm btn-dark rounded-pill">Visit</a></td></tr>
                         <tr data-lang="WordPress PHP"><td>wp-plugins-allone</td><td>Ανάπτυξη custom WordPress plugin με dashboard για στατιστικά συστήματος/βάσης, καταγραφή ενεργειών, file browser, shortcode editor και σελίδες ρυθμίσεων με custom options. Εξοικείωση με WordPress Hooks, MySQL queries και PHP/HTML/CSS.</td><td><a href="https://github.com/dimitridedou/wp-plugins-allone" target="_blank" class="btn btn-sm btn-dark rounded-pill">Visit</a></td></tr>
                         <tr data-lang="Docker"><td>CTF With Docker</td><td>Το project στοχεύει στη βασική εκμάθηση εξειδικευμένων εργαλείων μέσα από συνδυασμό θεωρίας και πρακτικών ασκήσεων.<br>Στο θεωρητικό μέρος παρουσιάζονται έννοιες γύρω από Docker, CTFs και σχετικά εργαλεία, ενώ στο πρακτικό μέρος ο χρήστης καλείται να εφαρμόσει τις γνώσεις του σε ασκήσεις που υλοποιούνται μέσα σε ειδικά διαμορφωμένα Docker περιβάλλοντα. Με την ολοκλήρωση όλων των ασκήσεων, ο χρήστης θα είναι σε θέση να χρησιμοποιεί αποτελεσματικά τα εργαλεία που διδάχθηκε.</td><td><a href="https://github.com/dimitridedou/CTF-With-Docker" target="_blank" class="btn btn-sm btn-dark rounded-pill">Visit</a></td></tr>
                         <tr data-lang="Docker"><td>Docker stack swarm</td><td>Εκπαιδευτικό έργο που συνδυάζει θεωρητικό (Docker, CTFs, εξειδικευμένα εργαλεία) με πρακτικές ασκήσεις σε περιβάλλοντα Docker. Στόχος είναι η παροχή βασικής εξοικείωσης με τη χρήση εργαλείων και η ανάπτυξη πρακτικών δεξιοτήτων.</td><td><a href="https://github.com/dimitridedou/docker-stack-swarm" target="_blank" class="btn btn-sm btn-dark rounded-pill">Visit</a></td></tr>

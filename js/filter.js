@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const filterInput = document.getElementById("filterSelect");
     const categoryFilter = document.getElementById("categoryFilter");
-    const cols = document.querySelectorAll("#projects .col"); // note: κρύβουμε το col
+    const cols = document.querySelectorAll("#listprojects .col"); // note: κρύβουμε το col
 
     function filterProjects() {
         const searchTerm = filterInput.value.toLowerCase();
@@ -31,4 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     filterInput.addEventListener("input", filterProjects);
     categoryFilter.addEventListener("change", filterProjects);
 });
+
 

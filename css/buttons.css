@@ -1,0 +1,28 @@
+/* Buttons */
+.grcode-social-btn {
+    transition: all 0.3s ease !important;
+    border-radius: 50px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    margin-bottom: 10px !important; 
+}
+
+.grcode-social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.grcode-box {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #0d6efd;
+    backdrop-filter: blur(10px);
+}
+
+.grcode-box h4 {
+    color: white;
+    margin-bottom: 20px;
+}

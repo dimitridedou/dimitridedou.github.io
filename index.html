@@ -1,215 +1,321 @@
 <!DOCTYPE html>
 <html lang="el">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://grcodeclub.gr/js/data.js"></script>
-        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-        <meta property="og:image" content="https://dimitridedou.github.io-main/files/prieview.png"/>
-        <meta property="og:title" content="Dedousis Dimitris">
-        <style>
-            .card-header{
-                background-color: #212529 !important;
-                color: white !important;
-            }
-            .page-item.active .page-link{
-                background-color: #212529 !important;
-                color: white !important;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="addHeader"></div>
-        <div class="container">
-            <div class="row mt-6 shadow-sm"> 
-                <!-- Αριστερή Στήλη -->
-                <div class="col-lg-4" style="position: relative;" >
-                    <div class="card shadow-lg" style="margin-bottom: 5%;"><img id="profileImage" class="card-img-top rounded-circle mx-auto mt-3"src="./files/profile.png" alt="Profile Picture" style="height: 220px; width: 220px; object-fit: cover; border: 3px solid #212529;">                        
-                        <div class="card-body text-center">
-                            <h3 class="card-title" id="info" style="text-align: center;">ΔΕΔΟΥΣΗΣ ΔΗΜΗΤΡΙΟΣ</h3><br>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex align-items-center"><i class="fa fa-map-marker me-2 text-danger"></i>Νίκαια, Αττικής </li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fa fa-calendar-alt me-2 text-primary"></i> 11/06/2000</li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fa fa-envelope me-2 text-warning"></i><a href="mailto:dedoudimitrios@gmail.com" class="text-decoration-none">dedoudimitrios@gmail.com</a></li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fa fa-phone me-2 text-success"></i> 69</li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fab fa-facebook me-2 text-primary"></i><a href="https://www.facebook.com/dimitridedou" class="text-decoration-none">Dimitris Dedousis</a></li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fab fa-instagram me-2 text-danger"></i><a href="https://www.instagram.com/dimitri.dedou" class="text-decoration-none">dimitri.dedou</a></li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fab fa-github me-2"></i><a href="https://github.com/dimitridedou" class="text-decoration-none">dimitridedou</a></li>
-                                <li class="list-group-item d-flex align-items-center"><i class="fab fa-linkedin me-2 text-primary"></i><a href="https://www.linkedin.com/in/dimitridedou/" class="text-decoration-none">Dimitris Dedousis</a></li>
-                                <li class="list-group-item d-flex align-items-center"><span class="me-2">✖</span><a href="https://x.com/dimitridedou" class="text-decoration-none">Dimitris Dedousis</a></li>
-                                <li class="list-group-item d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.087); font-size: 15px; font-weight: 500;">Δεν έχω ολοκληρώσει τις στρατιωτικές μου υποχρεώσεις (Αναβολή έως και 31/12/2027)</li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitris Dedousis</title>
+    <link rel="icon" type="image/x-icon" href="./files/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./files/favicon/32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./files/favicon/96x96.png">
+    <link rel="icon" type="image/png" sizes="46x46" href="./files/favicon/46x46.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./files/favicon/144x144.png">
+    <meta property="og:image" content="https://dimitridedou.github.io/files/profile.png"/>
+    <meta property="og:title" content="Δημήτριος Δεδούσης - Full Stack Developer"/>
+    <meta name="description" content="Personal Portfolio of Dimitrios Dedousis - Full Stack Developer & Tech Content Creator">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"> <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="./css/font-awesome/6-5-0.css"> <!-- Font Awesome -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/social.css">
+    <link rel="stylesheet" href="./css/forms.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">Δημήτρης Δεδούσης</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Σχετικά</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Δεξιότητες</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Έργα</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Επικοινωνία</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="d-flex align-items-center justify-content-center gap-2">
+            <img src="./files/profile.png" alt="Δημήτριος Δεδούσης" class="profile-image">
+            <div>
+                <h1>Δημήτρης Δεδούσης</h1>
+                <p>Tech Content Creator</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn-custom btn-primary-custom">Επικοινωνία</a>
+                    <a href="https://github.com/dimitridedou" target="_blank" class="btn-custom btn-secondary-custom">
+                        <i class="fab fa-github me-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-header"><h2 style="text-align: center;" id="educationTitle"><img  src="https://grcodeclub.gr/files-page/logo/logo-head.webp"></h2></div>
-                        <div class="card-body">
-                           <p style="text-align: center;">Πρόκειται για ένα project που ξεκίνησα το 2024 με στόχο τη δημιουργία και διάθεση εκπαιδευτικού υλικού στα ελληνικά, με κύρια θεματολογία το Development, τα Δίκτυα Υπολογιστών και το Cybersecurity. Παράλληλα, μέσα από τα social media προσπαθούμε να δημιουργήσουμε μια ενεργή κοινότητα ανθρώπων που μοιράζονται το ίδιο πάθος για την τεχνολογία και τον προγραμματισμό.</p>
-                            <div style="text-align: center;">
-                                <a href="https://grcodeclub.gr/" target="_blank" class="btn btn-outline-dark btn-sm m-1"><i class="fas fa-globe me-1"></i> Website</a>
-                                <a href="https://www.youtube.com/@grcodeclub" target="_blank" class="btn btn-outline-danger btn-sm m-1"><i class="fab fa-youtube me-1"></i> YouTube</a>
-                                <a href="https://www.instagram.com/grcode.club/" target="_blank" class="btn btn-outline-danger btn-sm m-1"><i class="fab fa-instagram me-1"></i> Instagram</a>
-                                <a href="https://www.tiktok.com/@grcode.club" target="_blank" class="btn btn-outline-dark btn-sm m-1"><i class="fab fa-tiktok me-1"></i> TikTok</a>
-                            </div>
+     <!-- About Section -->
+    <div class="content-container">
+        <section class="section" id="about">
+            <h2>Σχετικά με μένα</h2>
+            <p>
+                Μου αρέσει στον ελεύθερο χρόνο μου, να δημιουργώ ψηφιακό περιεχόμενο (post και Shorts Video) στα Social 
+                Media (@grcode.club), με στόχο την ενημέρωση γύρω από τον Προγραμματισμό και γενικότερα στην Τεχνολογία. 
+                Έχω έντονο ενδιαφέρον για τον χώρο της τεχνολογίας και φροντίζω να ενημερώνομαι συνεχώς για τις νέες 
+                εξελίξεις, ώστε να προσφέρω ποιοτικό και αξιόπιστο περιεχόμενο. Παράλληλα, μέσα από τη δουλειά μου 
+                επιδιώκω να χτίζω σχέση εμπιστοσύνης με το κοινό μου στον χώρο της τεχνολογίας.
+            </p>
+        </section>
+
+        <!-- GrCode ClubSection -->
+        <section class="section">
+            <h2>GrCode Club</h2>
+                <p class="mb-3">
+                    <strong>Δημιουργία Tech Περιεχομένου για τα Social Media (2023 – σήμερα)</strong><br>
+                    Παραγωγή short videos και ψηφιακού περιεχομένου με θέματα: Προγραμματισμό, Δίκτυα, Cybersecurity, Hardware, Web Development
+                </p>
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="https://grcodeclub.gr/" target="_blank" class="btn btn-sm btn-primary grcode-social-btn"><i class="fas fa-globe me-1"></i> Website</a>
+                    <a href="https://www.youtube.com/@grcodeclub" target="_blank" class="btn btn-sm btn-danger grcode-social-btn"><i class="fab fa-youtube me-1"></i> YouTube</a>
+                    <a href="https://www.instagram.com/grcode.club/" target="_blank" class="btn btn-sm btn-danger grcode-social-btn"><i class="fab fa-instagram me-1"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@grcode.club" target="_blank" class="btn btn-sm btn-dark grcode-social-btn"><i class="fab fa-tiktok me-1"></i> TikTok</a>
+                </div>
+                <p class="mb-4">
+                    <strong>Discord Community</strong><br>
+                    Παράλληλα, δημιουργήθηκε και μια ελληνική κοινότητα στο Discord με στόχο την επικοινωνία, την ανταλλαγή γνώσεων και το networking μεταξύ ατόμων που ενδιαφέρονται για τον προγραμματισμό και γενικότερα για την τεχνολογίας.
+                </p>
+                <a href="https://discord.gg/3FUTafW9M7" target="_blank" class="btn btn-sm btn-dark grcode-social-btn"><i class="fab fa-discord me-1"></i> Discord</a>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2>Δεξιότητες</h2>
+
+            <div class="skill-category">
+                <h5>Γλώσσες Προγραμματισμού</h5>
+                <div>
+                    <span class="skill-badge"><i class="fab fa-python me-1" style="color:#3776AB;"></i>Python</span>
+                    <span class="skill-badge"><i class="fab fa-js-square me-1" style="color:#f7df1e;"></i>JavaScript</span>
+                    <span class="skill-badge"><i class="fab fa-html5 me-1 text-danger"></i>HTML</span>
+                    <span class="skill-badge"><i class="fab fa-css3-alt me-1" style="color:#1572B6;"></i>CSS</span>
+                    <span class="skill-badge"><i class="fab fa-php me-1" style="color:#787CB5;"></i>PHP</span>
+                    <span class="skill-badge"><i class="fab fa-java me-1 text-danger"></i>Java</span>
+                    <span class="skill-badge"><i class="fas fa-code me-1 text-info"></i>C</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h5>Εργαλεία & Λογισμικό</h5>
+                <div>
+                    <span class="skill-badge"><i class="fab fa-docker me-1" style="color:#2496ED;"></i>Docker</span>
+                    <span class="skill-badge"><i class="fab fa-linux me-1"></i>Linux</span>
+                    <span class="skill-badge"><i class="fab fa-windows me-1" style="color:#0078D4;"></i>Windows</span>
+                    <span class="skill-badge"><i class="fas fa-image me-1" style="color:#31A8FF;"></i>Photoshop</span>
+                    <span class="skill-badge"><i class="fas fa-film me-1"></i>CapCut</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h5>Soft Skills</h5>
+                <div>
+                    <span class="skill-badge">Ομαδικότητα</span>
+                    <span class="skill-badge">Κριτική Σκέψη</span>
+                    <span class="skill-badge">Επικοινωνία</span>
+                    <span class="skill-badge">Διαχείριση Χρόνου</span>
+                    <span class="skill-badge">Δημιουργικότητα</span>
+                    <span class="skill-badge">Συνεχής Μάθηση</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2>Εκπαίδευση</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>Πανεπιστήμιο Δυτικής Αττικής</h5>
+                    <small>2018 – Σήμερα</small>
+                    <p class="mt-2">Φοιτητής στο Τμήμα Πληροφορικής & Μηχανικών Υπολογιστών</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>2ο ΕΠΑΛ Καλαμάτας</h5>
+                    <small>2015 – 2018</small>
+                    <p class="mt-2">Τεχνικός Εφαρμογών Πληροφορικής – Βαθμός: 19.9</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conferences Section -->
+        <section class="section">
+            <h2>Συμμετοχή σε Συνέδρια</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>Security BSides Athens 2025</h5>
+                    <small>28/06/2025</small>
+                    <p class="mt-2">Συμμετοχή ως εθελοντής με αρμοδιότητες στη διαχείριση του OBS και τον συντονισμό της ροής του podcast.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>Security BSides Athens 2024</h5>
+                    <small>29/06/2024</small>
+                    <p class="mt-2">Συμμετοχή ως εθελοντής με κύρια ευθύνη τη διανομή εισιτηρίων στους συμμετέχοντες.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>Τα Έργα μου</h2>
+            
+            <div class="mb-4 d-flex gap-3 flex-wrap" id="projects">
+                <input type="text" id="filterSelect" class="form-control filter-input flex-grow-1" placeholder="Αναζήτηση έργων...">
+                
+                <select id="categoryFilter" class="form-control filter-select">
+                    <option value="all">Όλα τα έργα</option>
+                    <option value="python">Python</option>
+                    <option value="docker">Docker</option>
+                    <option value="wordpress">WordPress</option>
+                    <option value="php">PHP</option>
+                    <option value="moodle">Moodle</option>
+                    <option value="security">Security</option>
+                </select>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="scroll" >
+                <div class="col">
+                    <div class="profile-card">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">wp-plugins-allone</h5>
+                            <p class="card-text text-muted mb-3">
+                                Ανάπτυξη custom WordPress plugin με dashboard για στατιστικά συστήματος, καταγραφή ενεργειών και file browser.
+                            </p>
+                            <span class="skill-badge small">WordPress</span>
+                            <span class="skill-badge small">PHP</span>
+                            <br>
+                            <a href="https://github.com/dimitridedou/wp-plugins-allone" target="_blank" class="btn btn-sm btn-primary mt-3 d-inline-block">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Δεξιά Στήλη (Πληροφορίες & Δεξιότητες ...) -->
-                <div class="col-lg-8 mb-4">
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-header bg-dark text-white text-center fw-bold"><h2 style="text-align: center;">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</h2></div>
-                        <div class="card-body" style="text-align: justify;">
-                            <p>Μου αρέσει στον ελεύθερο χρόνο μου, να δημιουργώ ψηφιακό περιεχόμενο (post και Shorts Video) στα Social Media (@grcode.club), με στόχο την ενημέρωση γύρω από τον Προγραμματισμό και γενικότερα στην Τεχνολογία. Έχω έντονο ενδιαφέρον για τον χώρο της τεχνολογίας και φροντίζω να ενημερώνομαι συνεχώς για τις νέες εξελίξεις, ώστε να προσφέρω ποιοτικό και αξιόπιστο περιεχόμενο. Παράλληλα, μέσα από τη δουλειά μου επιδιώκω να χτίζω σχέση εμπιστοσύνης με το κοινό μου στον χώρο της τεχνολογίας. </p>
+                <div class="col">
+                    <div class="profile-card">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">CTF With Docker</h5>
+                            <p class="card-text text-muted mb-3">
+                                Εκπαιδευτικό project συνδυάζοντας θεωρία και πρακτικές ασκήσεις σε Docker περιβάλλοντα.
+                            </p>
+                            <span class="skill-badge small">Docker</span>
+                            <span class="skill-badge small">Security</span>
+                            <br><br>
+                            <a href="https://github.com/dimitridedou/CTF-With-Docker" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-header"><h2 style="text-align: center;">ΙΚΑΝΟΤΗΤΕΣ</h2></div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="accordion" id="roadmapAccordion">
-                                    <div class="accordion-item">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#myskills" aria-expanded="true" aria-controls="myskills" id="skills">Soft Skills</button>
-                                        <div id="myskills" class="accordion-collapse collapse" aria-labelledby="myskills" data-bs-parent="#roadmapAccordion">
-                                            <div class="accordion-body" style="background-color: #21252943; color: black;">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                      <ul class="list-unstyled" style="color: black;"">
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Ομαδικότητα</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Κριτική σκέψη</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Υπευθυνότητα</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Επικοινωνία</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Προσαρμοστικότητα</li>
-                                                      </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                      <ul class="list-unstyled">
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Δημιουργικότητα</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Διαχείριση χρόνου</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Προσοχή στη λεπτομέρεια</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Ηγετικές ικανότητες</li>
-                                                        <li><i class="fa fa-check text-dark me-2"></i>Διάθεση για συνεχή μάθηση</li>
-                                                      </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#programming" aria-expanded="false" aria-controls="programming" id="programminglist">Γλώσσες Προγραμματισμού </button>
-                                        <div id="programming" class="accordion-collapse collapse" aria-labelledby="programming" data-bs-parent="#roadmapAccordion">
-                                            <div class="accordion-body">
-                                                <h4>
-                                                    <span class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-python me-1" style="color:#3776AB;"></i>Python</span>
-                                                    <span class="badge bg-dark text-white m-1"><i class="fab fa-html5 me-1 text-danger"></i>HTML</span>
-                                                    <span class="badge bg-dark text-white m-1"><i class="fab fa-css3-alt me-1 text-primary"></i>CSS</span>
-                                                    <a href="https://github.com/dimitridedou/javascript" target="_blank" class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-js-square me-1" style="color:#f7df1e;"></i>JavaScript</a>
-                                                    <a href="https://github.com/dimitridedou/php" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-php me-1" style="color:#787CB5;"></i>PHP</a>
-                                                    <a href="https://github.com/dimitridedou/java" target="_blank"class="badge bg-dark text-white text-decoration-none m-1"><i class="fab fa-java me-1 text-danger"></i>Java</a>
-                                                    <span class="badge bg-dark text-white m-1"><i class="fas fa-code me-1 text-info"></i>C</span>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#platforms" aria-expanded="false" aria-controls="platforms" id="Platforms">Λογισμικό & Εργαλεία</button>
-                                        <div id="platforms" class="accordion-collapse collapse" aria-labelledby="platforms" data-bs-parent="#roadmapAccordion">
-                                            <div class="accordion-body">
-                                                <span class="badge bg-primary m-1"><i class="fas fa-image me-1"></i>Photoshop</span>
-                                                <span class="badge bg-dark m-1"><i class="fas fa-film me-1"></i>CapCut</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Social" aria-expanded="false" aria-controls="Social" id="Social-heading">Social Media Πλατφόρμες</button>
-                                        <div id="Social" class="accordion-collapse collapse" aria-labelledby="Social-heading" data-bs-parent="#roadmapAccordion">
-                                            <div class="accordion-body">
-                                                  <span class="badge bg-primary m-1"><i class="fab fa-facebook me-1"></i>Facebook</span>
-                                                  <span class="badge bg-danger m-1"><i class="fab fa-instagram me-1"></i>Instagram</span>
-                                                  <span class="badge bg-dark m-1"><i class="fab fa-tiktok me-1"></i>TikTok</span>
-                                                  <span class="badge bg-danger m-1"><i class="fab fa-youtube me-1"></i>YouTube</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#os" aria-expanded="false" aria-controls="os" id="os-heading">Λειτουργικά Συστήματα</button>
-                                          <div id="os" class="accordion-collapse collapse" aria-labelledby="os-heading" data-bs-parent="#roadmapAccordion">
-                                                <div class="accordion-body">
-                                                    <span class="badge bg-dark m-1"><i class="fab fa-linux me-1"></i>Linux</span>
-                                                    <span class="badge bg-primary m-1"><i class="fab fa-windows me-1"></i>Windows</span>
-                                                </div>
-                                          </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="col">
+                    <div class="profile-card ">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">who-is-not-following-back</h5>
+                            <p class="card-text text-muted mb-3">
+                                Python script για να δεις ποιοι δεν σε ακολουθούν πίσω στο Instagram με ασφάλεια.
+                            </p>
+                            <span class="skill-badge small">Python</span>
+                            <span class="skill-badge small">Social Media</span>
+                            <br><br>
+                            <a href="https://github.com/dimitridedou/who-is-not-following-back" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-header">
-                          <h2 style="text-align: center;" id="educationTitle">ΕΚΠΑΙΔΕΥΣΗ</h2>
-                        </div>
-                        <div class="card-body" style="max-height: 400px; overflow-y: auto;" id="educationList">
-                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item border-0">
-                                    <h5 class="fw-bold">Πανεπιστήμιο Δυτικής Αττικής</h5>
-                                    <small class="text-muted">2018 – Σήμερα</small><br>
-                                    Φοιτητής στο Τμήμα Πληροφορικής & Μηχανικών Υπολογιστών
-                              </li>
-                              <li class="list-group-item border-0">
-                                    <h5 class="fw-bold">2ο ΕΠΑΛ Καλαμάτας</h5>
-                                    <small class="text-muted">2015 – 2018</small><br>
-                                    Τεχνικός Εφαρμογών Πληροφορικής – Βαθμός: 19.9
-                              </li>
-                            </ul>
+                </div>
+
+                <div class="col">
+                    <div class="profile-card ">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">Docker Stack Swarm</h5>
+                            <p class="card-text text-muted mb-3">
+                                Εκπαιδευτικό έργο συνδυάζοντας θεωρία με πρακτικές ασκήσεις Docker orchestration.
+                            </p>
+                            <span class="skill-badge small">Docker</span>
+                            <br><br>
+                            <a href="https://github.com/dimitridedou/docker-stack-swarm" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-header"><h2 style="text-align: center;" id="educationTitle">ΣΥΝΕΔΡΙΑ</h2></div>
-                        <div class="card-body" style="max-height: 400px; overflow-y: auto;" id="educationList">
-                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item border-0">
-                                    <h5 class="fw-bold">Security BSides Athens 2025</h5>
-                                    <small class="text-muted">28/06/2025</small><br>
-                                    Συμμετείχα εθελοντικά στη διοργάνωση του συνεδρίου, με αρμοδιότητες στη διαχείριση του OBS και τον συντονισμό της ροής του podcast.
-                              </li>
-                              <li class="list-group-item border-0">
-                                    <h5 class="fw-bold d-flex align-items-center">  Security BSides Athens 2024 <a href="https://drive.google.com/file/d/1RP6i3fCmQw7duM02F0CD7Cj3zfMb_ako/view?usp=drive_link" target="_blank" class="btn btn-outline-danger btn-sm ms-3"><i class="fas fa-file-pdf me-1"></i> Προβολή</a></h5>                                <small class="text-muted">29/06/202</small><br>
-                                    Συμμετείχα ως εθελοντής στη διοργάνωση του συνεδρίου, με κύρια ευθύνη τη διανομή εισιτηρίων στους συμμετέχοντες.
-                              </li>
-                            </ul>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="col">
+                    <div class="profile-card ">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">Lesson in Moodle</h5>
+                            <p class="card-text text-muted mb-3">
+                                Ηλεκτρονικό μάθημα για Δίκτυα Υπολογιστών στην πλατφόρμα Moodle με ασκήσεις αξιολόγησης.
+                            </p>
+                            <span class="skill-badge small">Moodle</span>
+                            <span class="skill-badge small">Education</span>
+                            <br><br>
+                            <a href="https://github.com/dimitridedou/lesson-in-moodle" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                </div></div>
-                
-                <div class="card shadow-lg mb-4" style="height: 100%;">
-                    <div class="card-header"><h2 style="text-align: center;">My Project</h2></div><br>
-                    <div>
-                        <span class="input-group-text"><i class="fas fa-filter" style=" margin-left: 10%;" ></i>
-                            <select id="filterSelect" class="form-select rounded-pill" style="width: 80%; margin-left: 1%;">
-                              <option value="">Όλα</option>
-                              <option va lue="HTML/CSS/JS">HTML/CSS/JS</option>
-                              <option value="PHP">PHP</option>
-                              <option value="Docker">Docker</option>
-                              <option value="WordPress">WordPress</option>
-                              <option value="Social_Media">Social Media</option>
-                              <option value="Python">Python</option>
-                            </select>
-                        </span>
+                </div>
+
+                <div class="col">
+                    <div class="profile-card ">
+                        <div class="p-3">
+                            <h5 class="card-title mb-2">My Setup Nvim</h5>
+                            <p class="card-text text-muted mb-3">Προσωπικές ρυθμίσεις και διαμόρφωση του Neovim text editor.</p>
+                            <span class="skill-badge small">Neovim</span><br><br>
+                            <a href="https://github.com/dimitridedou/my-setup-nvim" target="_blank" class="btn btn-sm btn-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                        </div>
                     </div>
-                    <table id="search" class="table table-bordered table-striped table-hover align-middle">
-                        <tr id="title-table"><th>Project</th><th>Περιγραφή</th><th>Link</th></tr>
-                        <tr data-lang="WordPress PHP"><td>wp-plugins-allone</td><td>Ανάπτυξη custom WordPress plugin με dashboard για στατιστικά συστήματος/βάσης, καταγραφή ενεργειών, file browser, shortcode editor και σελίδες ρυθμίσεων με custom options. Εξοικείωση με WordPress Hooks, MySQL queries και PHP/HTML/CSS.</td><td><a href="https://github.com/dimitridedou/wp-plugins-allone" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                        <tr data-lang="Docker"><td>CTF With Docker</td><td>Το project στοχεύει στη βασική εκμάθηση εξειδικευμένων εργαλείων μέσα από συνδυασμό θεωρίας και πρακτικών ασκήσεων.<br>Στο θεωρητικό μέρος παρουσιάζονται έννοιες γύρω από Docker, CTFs και σχετικά εργαλεία, ενώ στο πρακτικό μέρος ο χρήστης καλείται να εφαρμόσει τις γνώσεις του σε ασκήσεις που υλοποιούνται μέσα σε ειδικά διαμορφωμένα Docker περιβάλλοντα. Με την ολοκλήρωση όλων των ασκήσεων, ο χρήστης θα είναι σε θέση να χρησιμοποιεί αποτελεσματικά τα εργαλεία που διδάχθηκε.</td><td><a href="https://github.com/dimitridedou/CTF-With-Docker" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                        <tr data-lang="Docker"><td>Docker stack swarm</td><td>Εκπαιδευτικό έργο που συνδυάζει θεωρητικό (Docker, CTFs, εξειδικευμένα εργαλεία) με πρακτικές ασκήσεις σε περιβάλλοντα Docker. Στόχος είναι η παροχή βασικής εξοικείωσης με τη χρήση εργαλείων και η ανάπτυξη πρακτικών δεξιοτήτων.</td><td><a href="https://github.com/dimitridedou/docker-stack-swarm" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                        <tr data-lang="Python Social_Media"><td>who-is-not-following-back</td><td>Σε αυτό το project, θα σου δείξουμε έναν δωρεάν και ασφαλή τρόπο για να δεις ποιοι δεν σε ακολουθούν πίσω στο Instagram. Το βασικό βήμα; Κατεβάζεις τα δεδομένα του λογαριασμού σου στο κινητό σου – και πιο συγκεκριμένα τις λίστες με το ποιοι σε ακολουθούν και ποιους ακολουθείς εσύ.</td><td><a href="https://github.com/dimitridedou/who-is-not-following-back" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                        <tr><td>my setup nvim</td><td>-</td><td><a href="https://github.com/dimitridedou/my-setup-nvim" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                        <tr><td>Lesson in Μoodle</td><td>Στο πλαίσιο πανεπιστημιακής εργασίας υλοποιήθηκε ηλεκτρονικό μάθημα με θέμα «Δίκτυα Υπολογιστών» στην πλατφόρμα Moodle. Η εργασία περιλάμβανε την τοπική εγκατάσταση του συστήματος, τη δημιουργία του μαθήματος, την ανάρτηση εκπαιδευτικού υλικού καθώς και την ανάπτυξη ασκήσεων αξιολόγησης.</td><td><a href="https://github.com/dimitridedou/lesson-in-moodle" target="_blank" class="btn btn-sm btn-dark rounded-pill">GitHub</a></td></tr>
-                    </table>
-                    <script src="js/filter.js"></script>
-                </div>                
+                </div>
             </div>
-        </div>
-        <div id="addFooter"></div>
-    </body>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2>Επικοινωνία</h2>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong>Τοποθεσία</strong><br><span>Νίκαια, Αττική, Ελλάδα</span></div></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><div><strong>Email</strong><br><a href="mailto:dedoudimitrios@gmail.com">dedoudimitrios@gmail.com</a></div></div>
+                    <div class="contact-item"><i class="fas fa-calendar-alt"></i><div><strong>Γεννηθείσα</strong><br><span>11 Ιουνίου 2000</span></div></div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-white mb-4">Ακολουθήστε με</h5>
+                    <div class="social-links justify-content-start">
+                        <a href="https://github.com/dimitridedou" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/dimitridedou/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="https://www.facebook.com/dimitridedou" target="_blank" class="sociaΠl-link" title="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://www.instagram.com/dimitri.dedou" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://x.com/dimitridedou" target="_blank" class="social-link" title="X (Twitter)"><i class="fab fa-x-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer><p>&copy; 2026 Δημήτριος Δεδούσης. </p></footer>
+
+    <!-- JS Files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 </html>

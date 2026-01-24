@@ -1,0 +1,30 @@
+/* Navigation */
+.navbar {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(13, 110, 253, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}

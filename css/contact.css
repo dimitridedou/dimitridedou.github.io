@@ -1,0 +1,29 @@
+/* Contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 110, 253, 0.2);
+    border-radius: 50%;
+    color: #0d6efd;
+    margin-right: 15px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0d6efd;
+}

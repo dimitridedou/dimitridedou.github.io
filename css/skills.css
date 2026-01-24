@@ -1,0 +1,27 @@
+/* Skills Section */
+.skill-badge {
+    display: inline-block;
+    background: #212529;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background: #0d6efd;
+    transform: scale(1.1);
+}
+
+.skill-category {
+    margin-bottom: 30px;
+}
+
+.skill-category h5 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}

@@ -1,27 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const filterSelect = document.getElementById("filterSelect");
-    const table = document.getElementById("search");
-    const rows = table.getElementsByTagName("tr");
+    const filterInput = document.getElementById("filterSelect");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const cols = document.querySelectorAll("#scroll .col"); // note: κρύβουμε το col
 
-    function filterTable() {
-        const selectedLang = filterSelect.value.toLowerCase();
+    function filterProjects() {
+        const searchTerm = filterInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value.toLowerCase();
 
-        for (let i = 1; i < rows.length; i++) {
-            const row = rows[i];
-            const cells = row.getElementsByTagName("td");
+        cols.forEach(col => {
+            const card = col.querySelector(".profile-card");
+            const title = card.querySelector("h5")?.textContent.toLowerCase() || "";
+            const description = card.querySelector("p")?.textContent.toLowerCase() || "";
+            const badges = Array.from(card.querySelectorAll(".skill-badge")).map(b => b.textContent.toLowerCase());
 
-            if (cells.length > 0) {
-                const rowLang = row.getAttribute("data-lang")?.toLowerCase() || "";
+            // Έλεγχος αναζήτησης
+            const matchSearch = !searchTerm ||
+                                title.includes(searchTerm) ||
+                                description.includes(searchTerm) ||
+                                badges.some(badge => badge.includes(searchTerm));
 
-                // Εμφανίζει τη γραμμή αν δεν έχει επιλεγεί φίλτρο
-                // ή αν το data-lang περιέχει την τιμή του φίλτρου
-                const matchLang = selectedLang === "" || rowLang.includes(selectedLang);
+            // Έλεγχος κατηγορίας
+            const matchCategory = selectedCategory === "all" ||
+                                  badges.some(badge => badge.includes(selectedCategory));
 
-                row.style.display = matchLang ? "" : "none";
-            }
-        }
+            // Εμφάνιση / Απόκρυψη COLUMN
+            col.style.display = (matchSearch && matchCategory) ? "" : "none";
+        });
     }
 
-    // Όποτε αλλάζει το dropdown → φιλτράρει
-    filterSelect.addEventListener("change", filterTable);
+    filterInput.addEventListener("input", filterProjects);
+    categoryFilter.addEventListener("change", filterProjects);
 });
